@@ -11,7 +11,11 @@
 │   ├── CLAUDE_CODE_VSCODE_REFERENCE.md    # VS Code統合メインリファレンス
 │   ├── claude-code-vscode-setup-guide.md   # 技術的詳細ガイド
 │   ├── claude-code-implementation-checklist.md  # 実装チェックリスト
-│   └── claude-code-vscode-setup-patterns.md    # パターン認識ガイド
+│   ├── claude-code-vscode-setup-patterns.md    # パターン認識ガイド
+│   ├── aivisspeech-url-fix-pr.md           # AIVISSPEECH URL修正PR文書
+│   └── claudedocs-external-directory-workflow.md  # 外部ディレクトリワークフロー
+├── prompts/           # 再利用可能なプロンプトテンプレート
+│   └── task-documentation-template.md      # タスク文書化汎用テンプレート
 └── scripts/           # 実行可能スクリプト
     └── claude-code-vscode-quick-setup.sh   # クイックセットアップ
 ```
@@ -22,6 +26,12 @@
 ```bash
 # ユーザーが「nanoじゃなくてVS Codeで開きたい」と言ったら
 bash ~/.claudedocs/scripts/claude-code-vscode-quick-setup.sh
+```
+
+### タスク完了後の文書化
+```bash
+# タスク完了後、以下のプロンプトテンプレートを参照
+cat ~/.claudedocs/prompts/task-documentation-template.md
 ```
 
 ## 📖 利用方法

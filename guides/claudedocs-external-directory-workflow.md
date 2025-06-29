@@ -76,7 +76,7 @@ git -C /home/ubuntu/claudedocs push
 
 コミットハッシュ: 31862c2
 
-プッシュ先: https://github.com/Rokurolize/claudedocs.git
+プッシュ先: `https://github.com/Rokurolize/claudedocs.git`
 
 ## 技術的詳細
 
