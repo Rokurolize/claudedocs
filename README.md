@@ -1,51 +1,37 @@
-# Claude Code ドキュメントライブラリ
+# Claudedocs Project
 
-このディレクトリには、Claude Codeインスタンス間で共有すべき知識とソリューションが格納されています。
+このプロジェクトは、Claude Code が日々のタスクやトラブルシューティングで得られた知見を文書化し、Claude Code インスタンス間で共有すべきナレッジベースとして活用するためのものです。
 
-## 📁 ディレクトリ構造
+## 貢献ガイド
 
-```
-.claudedocs/
-├── README.md          # このファイル
-├── guides/            # 詳細ガイドとリファレンス
-│   ├── CLAUDE_CODE_VSCODE_REFERENCE.md    # VS Code統合メインリファレンス
-│   ├── claude-code-vscode-setup-guide.md   # 技術的詳細ガイド
-│   ├── claude-code-implementation-checklist.md  # 実装チェックリスト
-│   ├── claude-code-vscode-setup-patterns.md    # パターン認識ガイド
-│   ├── aivisspeech-url-fix-pr.md           # AIVISSPEECH URL修正PR文書
-│   └── claudedocs-external-directory-workflow.md  # 外部ディレクトリワークフロー
-├── prompts/           # 再利用可能なプロンプトテンプレート
-│   └── task-documentation-template.md      # タスク文書化汎用テンプレート
-└── scripts/           # 実行可能スクリプト
-    └── claude-code-vscode-quick-setup.sh   # クイックセットアップ
-```
+新しいドキュメントを追加する際は、以下のガイドラインに従ってください。
 
-## 🚀 クイックスタート
+### ディレクトリ構造
 
-### WSL VS Code統合
-```bash
-# ユーザーが「nanoじゃなくてVS Codeで開きたい」と言ったら
-bash ~/.claudedocs/scripts/claude-code-vscode-quick-setup.sh
-```
+- `guides/`: 特定のタスクの手順やトラブルシューティングに関する詳細なガイド。
+- `reference/`: コマンドリファレンスや設定ファイルのスニペットなど。
 
-### タスク完了後の文書化
-```bash
-# タスク完了後、以下のプロンプトテンプレートを参照
-cat ~/.claudedocs/prompts/task-documentation-template.md
-```
+## 文書化の原則
 
-## 📖 利用方法
+- **事実ベース**: 主観的な解釈を避け、客観的事実を記載
+- **再現可能性**: 他の Claude Code インスタンスが同じ結果を得られるよう詳細に記載
+- **エラー対応**: エラーとその解決方法も含める
+- **構造化**: 一貫した見出しとセクション構成を維持
 
-1. **問題に遭遇したら**: まず関連するガイドを確認
-2. **新しい解決策を発見したら**: 適切なディレクトリに文書化
-3. **他のClaude Codeと共有**: このディレクトリを参照
+### ファイル名
 
-## 🤝 貢献ガイドライン
+- ファイル名には明確で検索しやすい名前を選択し、`[内容]-[YYYYMMDD].md`の形式で作成してください。
+- 例: `Setup-new-python-project-20231027.md`
 
-- 明確で実行可能な手順を記載
-- 問題の本質と解決策を説明
-- テスト済みのコードのみを含める
-- ユーザー視点を忘れない
+### ドキュメントの構成
+
+各ドキュメントは、Claude Code が問題を迅速に理解し、解決できるよう、以下のセクションを含むことが推奨されます。
+
+1.  **要約**: 問題と解決策の概要。
+2.  **実行手順**: 解決に至った具体的で実行可能な手順のリスト。
+3.  **技術的詳細**: 背景情報、関連ツール、エラーとその対処法など。
+4.  **最終的なコマンド/設定**: コピー＆ペーストして利用できるコードブロック。
 
 ---
-*Claude Code by Claude Code for Claude Code*
+
+_Claude Code by Claude Code for Claude Code_
